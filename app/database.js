@@ -1,16 +1,14 @@
-require("dotenv").config();
-const { Pool } = require("pg");
-let conf;
+const mongoose = require("mongoose");
+const { mongo_url } = require("./config/");
 
-process.env.ONLINE === "true" || process.env.NODE_ENV === "prod"
-	? (conf = {
-			connectionString: process.env.DATABASE_URL,
-			ssl: {
-				rejectUnauthorized: false,
-			},
-	  })
-	: (conf = {
-			connectionString: process.env.PG_URL,
-	  });
-
-module.exports = new Pool(conf);
+module.exports = async () => {
+	try {
+		await mongoose.connect(mongo_url, {
+			useNewUrlParser: true,
+		});
+		console.log("MongoDB Connected");
+	} catch (err) {
+		console.error(err);
+		process.exit(1);
+	}
+};

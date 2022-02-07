@@ -1,16 +1,9 @@
 const { Router } = require("express");
-const controller = require("./controllers/controller.js");
-const {
-	validateBody,
-	validateQuery,
-} = require("./middlewares/validationMW.js");
-const { bodySchema, querySchema } = require("./schemas");
-
-const bodyValidation = validateBody(bodySchema);
-const queryValidation = validateQuery(querySchema);
+const { home, shorten } = require("./controllers/controller.js");
 
 const router = Router();
 
-router.get("/").get("/findall").post("/delete");
+router.get("/:code", home);
+router.post("/api/url/shorten", shorten);
 
 module.exports = router;

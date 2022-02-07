@@ -1,5 +1,7 @@
 module.exports = {
 	host: process.env.HOST || "localhost",
 	port: process.env.PORT || 5000,
-	pg_url: process.env.PG_URL,
+	mongo_url: process.env.MONGO_URL,
+	baseUrl: process.env.BASE_URL,
+	redis_url: process.env.REDIS_URL,
 };
