@@ -1,8 +1,8 @@
 <div align="center">
-  <h3 align="center">Small Weather App</h3>
+  <h3 align="center">TinierUrl</h3>
 
   <p align="center">
-    Small Weather App powered by OpenWeatherMap
+    TinierUrl the small url shortener!
     <br />
     <br />
     <br />
@@ -41,8 +41,7 @@
 
 ## About The Project
 
-The goal of this app is just to get the weather of a selected city. I wanted to try to work with an api other than the one I previously worked with (twitch api).
-Since I'm new to working with ejs I wanted to make something fun and try myself with ejs.
+This is my take on a url shortener. I'll make some changes over time to introduce some new features like an authentication mechanism and favorites.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -52,10 +51,9 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 - [Nodejs](https://nodejs.org/en/)
 - [Expressjs](https://expressjs.com/)
-- [ejs](https://ejs.co/)
-- [axios](https://github.com/axios/axios)
+- [pug](https://pugjs.org/)
 - [dotenv](https://www.npmjs.com/package/dotenv)
-- [lodash.merge](https://www.npmjs.com/package/lodash.merge)
+- [express-sessions](https://www.npmjs.com/package/express-session) (to come)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -63,7 +61,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 ## Getting Started
 
-To use this app you will need to install nodejs on your machine and create an account on [OpenWeatherMap](https://openweathermap.org/) to get an api key.
+To use this app you will need to install nodejs on your machine.
 
 ### Prerequisites
 
@@ -78,41 +76,35 @@ To use this app you will need to install nodejs on your machine and create an ac
 
     ```bash
     sudo apt update
-    sudo apt install nodejs
-    sudo apt install npm
+    sudo apt install curl
+    curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+    source ~/.profile
+    nvm install node
     ```
 
     - Fedora
 
     ```bash
     sudo dnf upgrade
-    sudo dnf install nodejs
+    sudo dnf install curl
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.1/install.sh | bash
+    source ~/.bashrc
+    nvm install node
     ```
-
-- npm
-  ```bash
-  npm install npm@latest -g
-  ```
 
 ### Installation
 
-1. Get a free API Key at [Open Weather](https://openweathermap.org/)
-2. Clone the repo
+1. Clone the repo
    ```bash
-   git clone https://github.com/MrSnakeDoc/weather-app.git
+   git clone https://github.com/MrSnakeDoc/shortee.git
    ```
    or by ssh
    ```
-   git clone git@github.com:MrSnakeDoc/weather-app.git
+   git clone git@github.com:MrSnakeDoc/shortee.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```bash
-   npm install
-   ```
-4. Enter your API in `.env` file
-
-   ```js
-   API_KEY = 'PASTE YOUR OPENWEATHERMAP API KEY';
+   cd shortee && npm install
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -124,7 +116,7 @@ To use this app you will need to install nodejs on your machine and create an ac
 To launch the app you need to write:
 
 ```bash
-npm start
+npm run dev
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
