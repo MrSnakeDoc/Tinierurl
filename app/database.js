@@ -1,14 +1,17 @@
-const mongoose = require("mongoose");
-const { mongo_url } = require("./config/");
+require("dotenv").config();
+const { Pool } = require("pg");
+// POOL allows you to limit connections to the database
+let conf;
 
-module.exports = async () => {
-	try {
-		await mongoose.connect(mongo_url, {
-			useNewUrlParser: true,
-		});
-		console.log("MongoDB Connected");
-	} catch (err) {
-		console.error(err);
-		process.exit(1);
-	}
-};
+process.env.ONLINE === "true" || process.env.NODE_ENV === "prod"
+	? (conf = {
+			connectionString: process.env.DATABASE_URL,
+			ssl: {
+				rejectUnauthorized: false,
+			},
+	  })
+	: (conf = {
+			connectionString: process.env.PG_URL,
+	  });
+
+module.exports = new Pool(conf);

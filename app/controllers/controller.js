@@ -1,13 +1,13 @@
 const validUrl = require("valid-url");
 const { nanoid } = require("nanoid");
-const Url = require("../models/Url");
+const { Url } = require("../models/");
 const { baseUrl } = require("../config/");
 
 module.exports = {
 	async home(req, res) {
 		try {
-			const url = await Url.findOne({ urlCode: req.params.code });
-			url ? res.redirect(url.longUrl) : res.status(404).json("No url found");
+			const url = await Url.findParam("urlCode", req.params.code);
+			url ? res.redirect(url.longurl) : res.status(404).json("No url found");
 		} catch (err) {
 			console.error(err);
 			res.status(500).json("Server error");
@@ -20,19 +20,17 @@ module.exports = {
 		const urlCode = nanoid();
 		if (validUrl.isUri(longUrl)) {
 			try {
-				let url = await Url.findOne({ longUrl });
+				const url = await Url.findParam("longUrl", longUrl);
 				if (url) {
 					res.json(url);
 				} else {
 					const shortUrl = baseUrl + "/" + urlCode;
-					url = new Url({
+					const result = await new Url({
+						urlCode,
 						longUrl,
 						shortUrl,
-						urlCode,
-						date: new Date(),
-					});
-					await url.save();
-					res.json(url);
+					}).save();
+					res.json(result);
 				}
 			} catch (err) {
 				console.error(err);

@@ -1,0 +1,190 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@100;300;400;500;600;700;800;900&display=swap");
+html,
+body,
+#background {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #e1eff6;
+}
+
+body {
+  font-family: "Fira Sans Condensed", sans-serif;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+}
+body nav {
+  background-color: #6e7cdb;
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0rem 0rem 20px rgba(170, 170, 170, 0.788);
+}
+body nav .logo a {
+  margin-left: 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+}
+body nav .links {
+  margin-right: 1rem;
+}
+body nav .links .new a {
+  margin-right: 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+}
+body .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+}
+body .content .title.is-1 {
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: bold;
+  color: #6e7cdb;
+}
+body .content .card-container {
+  display: flex;
+  justify-content: center;
+  width: calc(100% - 29rem);
+  flex-wrap: wrap;
+}
+body .content .card-container p {
+  font-weight: bold;
+}
+body .content .card-container .incidents_box {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 2rem;
+  height: auto;
+  width: 25rem;
+  box-shadow: 0rem 0rem 8px rgba(170, 170, 170, 0.788);
+}
+body .content .card-container .incidents_box .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 5rem;
+  background-color: #6e7ddc;
+}
+body .content .card-container .incidents_box .title a {
+  text-transform: uppercase;
+  color: #fff;
+}
+body .content .card-container .incidents_box span {
+  font-weight: normal;
+}
+body .content .card-container .incidents_box button {
+  width: 100%;
+}
+body .content .card-container .incidents_box:hover {
+  box-shadow: 0px 0px 10px black;
+  transition: all 0.5s ease-out;
+  transform: scale(1.05);
+  border: 1px solid #cccccc;
+}
+body .content .incident-form {
+  width: 40rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+}
+body .content .incident-form .title-box {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 5rem;
+  background-color: #6e7ddc;
+}
+body .content .incident-form .title-box h3 {
+  margin: 0rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+body .content .incident-form h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #6e7cdb;
+}
+body .content .incident-form p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+body .content .incident-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+body .content .incident-form button {
+  margin-top: 0.5rem;
+}
+body .content .new-incident-form {
+  width: 40rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+}
+body .content .new-incident-form .title.is-1 {
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: bold;
+  color: #6e7cdb;
+}
+body .content .new-incident-form .title-box {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 5rem;
+  background-color: #6e7ddc;
+}
+body .content .new-incident-form .title-box h3 {
+  text-transform: uppercase;
+  color: #fff;
+}
+body .content .new-incident-form h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #6e7cdb;
+}
+body .content .new-incident-form select {
+  width: 100%;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  background-color: #6e7ddc;
+  color: white;
+  cursor: pointer;
+}
+body .content .new-incident-form select:after {
+  content: "∨";
+}
+body .content .new-incident-form p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+body .content .new-incident-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+body .content .new-incident-form button {
+  margin-top: 0.5rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

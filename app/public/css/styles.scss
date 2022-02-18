@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@100;300;400;500;600;700;800;900&display=swap");
+
+html,
+body,
+#background {
+	width: 100vw;
+	min-height: 100vh;
+	background-color: #e1eff6;
+}
+
+body {
+	font-family: "Fira Sans Condensed", sans-serif;
+	margin: 0px;
+	display: flex;
+	flex-direction: column;
+
+	nav {
+		background-color: #6e7cdb;
+		height: 3rem;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		box-shadow: 0rem 0rem 20px rgba(170, 170, 170, 0.788);
+
+		.logo a {
+			margin-left: 1rem;
+			font-size: 1rem;
+			text-decoration: none;
+			color: #fff;
+		}
+		.links {
+			margin-right: 1rem;
+		}
+		.links .new a {
+			margin-right: 1rem;
+			font-size: 1rem;
+			text-decoration: none;
+			color: #fff;
+		}
+	}
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 24px;
+
+		.title.is-1 {
+			text-align: center;
+			margin-top: 2rem;
+			font-weight: bold;
+			color: #6e7cdb;
+		}
+		.card-container {
+			display: flex;
+			justify-content: center;
+			width: calc(100% - 29rem);
+			flex-wrap: wrap;
+
+			p {
+				font-weight: bold;
+			}
+			.incidents_box {
+				display: flex;
+				flex-direction: column;
+				margin: 2rem 2rem;
+				height: auto;
+				width: 25rem;
+				box-shadow: 0rem 0rem 8px rgba(170, 170, 170, 0.788);
+
+				.title {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+					height: 5rem;
+					background-color: #6e7ddc;
+
+					a {
+						text-transform: uppercase;
+						color: #fff;
+					}
+				}
+				span {
+					font-weight: normal;
+				}
+
+				button {
+					width: 100%;
+				}
+			}
+			.incidents_box:hover {
+				box-shadow: 0px 0px 10px black;
+				transition: all 0.5s ease-out;
+				transform: scale(1.05);
+				border: 1px solid #cccccc;
+			}
+		}
+		.incident-form {
+			width: 40rem;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-content: center;
+
+			.title-box {
+				display: flex;
+				align-content: center;
+				justify-content: center;
+				width: 100%;
+				height: 5rem;
+				background-color: #6e7ddc;
+
+				h3 {
+					margin: 0rem;
+					text-transform: uppercase;
+					color: #fff;
+				}
+			}
+
+			h3 {
+				margin-top: 0.5rem;
+				margin-bottom: 0.5rem;
+				color: #6e7cdb;
+			}
+			p {
+				margin-top: 0.5rem;
+				margin-bottom: 0.5rem;
+			}
+
+			form {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				align-items: center;
+				justify-content: center;
+			}
+			button {
+				margin-top: 0.5rem;
+			}
+		}
+		.new-incident-form {
+			width: 40rem;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-content: center;
+			.title.is-1 {
+				text-align: center;
+				margin-top: 2rem;
+				font-weight: bold;
+				color: #6e7cdb;
+			}
+
+			.title-box {
+				display: flex;
+				align-content: center;
+				justify-content: center;
+				width: 100%;
+				height: 5rem;
+				background-color: #6e7ddc;
+
+				h3 {
+					text-transform: uppercase;
+					color: #fff;
+				}
+			}
+
+			h3 {
+				margin-top: 0.5rem;
+				margin-bottom: 0.5rem;
+				color: #6e7cdb;
+			}
+
+			select {
+				width: 100%;
+				height: 2.5rem;
+				font-size: 1.5rem;
+				background-color: #6e7ddc;
+				color: white;
+				cursor: pointer;
+			}
+			select:after {
+				content: "\2228";
+			}
+
+			p {
+				margin-top: 0.5rem;
+				margin-bottom: 0.5rem;
+			}
+
+			form {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				align-items: center;
+				justify-content: center;
+			}
+
+			button {
+				margin-top: 0.5rem;
+			}
+		}
+	}
+}

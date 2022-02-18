@@ -1,7 +1,7 @@
 module.exports = {
 	host: process.env.HOST || "localhost",
 	port: process.env.PORT || 8080,
-	mongo_url: process.env.MONGO_URL,
+	pg_url: process.env.DATABASE_URL,
 	baseUrl: process.env.DOMAIN,
-	redis_url: process.env.REDISCLOUD_URL,
+	secret: process.env.SECRET,
 };
