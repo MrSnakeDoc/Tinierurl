@@ -1,6 +1,5 @@
 require("dotenv").config();
 const express = require("express");
-const helmet = require("helmet");
 const session = require("express-session");
 const cors = require("cors");
 const { secret } = require("./app/config/index.js");
@@ -10,8 +9,6 @@ const router = require("./app/router.js");
 const app = express();
 
 app.use(cors());
-
-app.use(helmet.frameguard());
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
