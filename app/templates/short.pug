@@ -1,0 +1,8 @@
+include includes/header.pug
+div(class="content")
+    div(class="card")
+            p(class="title" id="title") Here you go! TinierUrl has arrived
+            div(class="shortUrl_container")
+                div(class="shortUrl_container_response") #{shortUrl}
+                button(class="copy_to_clipboard_button" onclick="copyToClipboard()") Copy
+script(src="/js/script.js")

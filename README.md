@@ -1,8 +1,8 @@
 <div align="center">
-  <h3 align="center">Small Weather App</h3>
+  <h3 align="center">TinierUrl</h3>
 
   <p align="center">
-    Small Weather App powered by OpenWeatherMap
+    TinierUrl the small url shortener!
     <br />
     <br />
     <br />

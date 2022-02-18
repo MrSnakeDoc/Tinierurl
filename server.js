@@ -2,15 +2,11 @@ require("dotenv").config();
 const express = require("express");
 const session = require("express-session");
 const cors = require("cors");
-const swaggerUi = require("swagger-ui-express");
 const { secret } = require("./app/config/index.js");
 const bodySanitizer = require("./app/middlewares/bodySanitizer");
 const router = require("./app/router.js");
-const docs = require("./app/docs/");
 
 const app = express();
-
-app.use("/docs", swaggerUi.serve, swaggerUi.setup(docs));
 
 app.use(cors());
 

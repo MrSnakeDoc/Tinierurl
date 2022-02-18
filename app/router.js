@@ -1,9 +1,8 @@
 const { Router } = require("express");
-const { home, shorten } = require("./controllers/controller.js");
+const { homePage, home, shorten } = require("./controllers/controller.js");
 
 const router = Router();
 
-router.get("/:code", home);
-router.post("/api/url/shorten", shorten);
+router.get("/", homePage).get("/:code", home).post("/api/url/shorten", shorten);
 
 module.exports = router;

@@ -1,5 +1,5 @@
 {
-	"name": "",
+	"name": "Tinierurl",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
@@ -11,14 +11,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/O-clock-XIII/S04E03-trombinoclock-MrSnakeDoc.git"
+		"url": "git+https://github.com/MrSnakeDoc/Tinierurl.git"
 	},
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/O-clock-XIII/S04E03-trombinoclock-MrSnakeDoc/issues"
+		"url": "https://github.com/MrSnakeDoc/Tinierurl/issues"
 	},
-	"homepage": "https://github.com/O-clock-XIII/S04E03-trombinoclock-MrSnakeDoc#readme",
+	"homepage": "https://github.com/MrSnakeDoc/Tinierurl#readme",
 	"dependencies": {
 		"cors": "^2.8.5",
 		"dotenv": "^10.0.0",
@@ -29,7 +29,6 @@
 		"pg": "^8.7.3",
 		"pug": "^3.0.2",
 		"sanitizer": "^0.1.3",
-		"swagger-ui-express": "^4.2.0",
 		"valid-url": "^1.0.9"
 	},
 	"prettier": {

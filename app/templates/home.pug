@@ -1,24 +1,9 @@
 include includes/header.pug
 div(class="content")
-    h1(class="title is-1") #{title}
-    div(class="card-container")
-        - for (const incident of incidents)
-            div(class="incidents_box box")
-                div(class="title box")
-                    if path===`/attraction/${incident.attraction_id}`
-                        a(href=`/attraction/${incident.attraction_id}` class="is-vcentered") #{attraction.name}
-                    else
-                        a(href=`/attraction/${incident.attraction_id}` class="is-vcentered") #{incident.name}
-                p Numéro d'incident : 
-                    a(href=`/incident/${incident.id}`) #{incident.id}
-                p Type d'incident: 
-                    span #{incident.incident_type}
-                p Technicien assigné: 
-                    span #{incident.assigned_technician}
-                p Date d'ouverture du ticket: 
-                    span #{incident.report_time}
-                p Date de résolution: 
-                    span #{incident.solved_date}
-                if incident.solved_date && path === "/incident/delete"
-                    form(action=`/incident/delete/${incident.id}` method="POST")
-                        button(class="button is-danger") Supprimer
+    div(class="card")
+        form(action="/api/url/shorten" method="POST" class="form-longUrl")
+            p(class="title" id="title") Enter a long URL to create a TinierURL
+            input(type="text" class="form-control" name="longUrl" placeholder="Paste here the long Url" aria-label="longUrl" aria-describedby="basic-addon1")
+            button(type="submit" class="submit-button") Submit
+
+

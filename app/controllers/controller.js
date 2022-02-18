@@ -4,6 +4,10 @@ const { Url } = require("../models/");
 const { baseUrl } = require("../config/");
 
 module.exports = {
+	homePage(req, res) {
+		res.render("home");
+	},
+
 	async home(req, res) {
 		try {
 			const url = await Url.findParam("urlCode", req.params.code);
@@ -22,7 +26,7 @@ module.exports = {
 			try {
 				const url = await Url.findParam("longUrl", longUrl);
 				if (url) {
-					res.json(url);
+					res.render("short", { shortUrl: url.shorturl });
 				} else {
 					const shortUrl = baseUrl + "/" + urlCode;
 					const result = await new Url({
@@ -30,7 +34,7 @@ module.exports = {
 						longUrl,
 						shortUrl,
 					}).save();
-					res.json(result);
+					res.render("short", { shortUrl: result.shorturl });
 				}
 			} catch (err) {
 				console.error(err);
