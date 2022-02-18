@@ -10,17 +10,37 @@ module.exports = {
 
 	async home(req, res) {
 		try {
+			console.log(req.params.code);
 			const url = await Url.findParam("urlCode", req.params.code);
-			url ? res.redirect(url.longurl) : res.status(404).json("No url found");
+			console.log(url);
+			url
+				? res.redirect(url.longurl)
+				: res.render("error", {
+						error_title: "ERROR 404",
+						error: "Error 404, are you lost ? Try another URL!",
+				  });
 		} catch (err) {
-			console.error(err);
-			res.status(500).json("Server error");
+			res.render("error", {
+				error_title: "ERROR 500",
+				error: "Error 500",
+			});
 		}
 	},
 
 	async shorten(req, res) {
 		const { longUrl } = req.body;
-		!validUrl.isUri(baseUrl) ? res.status(401).json("Invalid base url") : null;
+		if (!longUrl) {
+			res.render("error", {
+				error_title: "ERROR 400",
+				error: "Error 400, are you sure you have paste the URL ?",
+			});
+		}
+		!validUrl.isUri(baseUrl)
+			? res.render("error", {
+					error_title: "ERROR 400",
+					error: "Error 400, are you sure you it's an URL ?",
+			  })
+			: null;
 		const urlCode = nanoid();
 		if (validUrl.isUri(longUrl)) {
 			try {
@@ -37,11 +57,16 @@ module.exports = {
 					res.render("short", { shortUrl: result.shorturl });
 				}
 			} catch (err) {
-				console.error(err);
-				res.status(500).json("Server error");
+				res.render("error", {
+					error_title: "ERROR 500",
+					error: "Error 500",
+				});
 			}
 		} else {
-			res.status(401).json("Invalid long url");
+			res.render("error", {
+				error_title: "ERROR 400",
+				error: "Error 400, are you sure you it's an URL ?",
+			});
 		}
 	},
 };
