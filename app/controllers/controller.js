@@ -14,7 +14,7 @@ module.exports = {
 			const url = await Url.findParam("urlCode", req.params.code);
 			console.log(url);
 			url
-				? res.redirect(url.longurl)
+				? res.redirect(301, url.longurl)
 				: res.render("error", {
 						error_title: "ERROR 404",
 						error: "Error 404, are you lost ? Try another URL!",
