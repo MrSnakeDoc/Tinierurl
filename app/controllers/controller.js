@@ -10,9 +10,7 @@ module.exports = {
 
 	async home(req, res) {
 		try {
-			console.log(req.params.code);
 			const url = await Url.findParam("urlCode", req.params.code);
-			console.log(url);
 			url
 				? res.redirect(301, url.longurl)
 				: res.render("error", {
