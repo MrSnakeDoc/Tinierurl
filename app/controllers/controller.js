@@ -9,8 +9,6 @@ module.exports = {
 	},
 
 	async home(req, res) {
-		console.log(req.params);
-		console.log("req.referer =>", req.referer);
 		try {
 			const url = await Url.findParam("urlCode", req.params.code);
 			url
