@@ -11,11 +11,7 @@ const app = express();
 
 app.use(cors());
 
-app.use(
-	helmet({
-		frameguard: false,
-	})
-);
+app.use(helmet.frameguard());
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
