@@ -1,0 +1,13 @@
+POST http://localhost:5000/api/url/shorten HTTP/1.1
+content-type: application/json
+
+{
+    "longUrl" : "https://www.amazon.com/Seagate-Portable-External-Hard-Drive/dp/B07CRG94G3/ref=lp_16225007011_1_2"
+}
+
+###
+GET http://localhost:5000/H5bWQCxi9E1PPUFkXWzX6 HTTP/1.1
+content-type: application/json
+
+
+# http://localhost:5000/a4o_tlNea5BqwWZkOI_Hx

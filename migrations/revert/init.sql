@@ -1,0 +1,12 @@
+-- Revert shortee:init from pg
+
+BEGIN;
+
+DROP TRIGGER IF EXISTS set_timestamp ON CUSTOMER;
+DROP TRIGGER IF EXISTS set_timestamp ON URL;
+
+DROP FUNCTION IF EXISTS trigger_set_timestamp;
+
+DROP TABLE IF EXISTS CUSTOMER, URL CASCADE;
+
+COMMIT;

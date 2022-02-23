@@ -1,0 +1,9 @@
+include includes/header.pug
+div(class="content")
+    div(class="card")
+        form(action="/api/url/shorten" method="POST" class="form-longUrl")
+            p(class="title" id="title") Enter a long URL to create a TinierURL
+            input(type="text" class="form-control" name="longUrl" placeholder="Paste here the long Url" aria-label="longUrl" aria-describedby="basic-addon1")
+            button(type="submit" class="submit-button") Submit
+
+
