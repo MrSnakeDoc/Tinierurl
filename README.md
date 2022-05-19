@@ -152,6 +152,6 @@ Distributed under the GNU GENERAL PUBLIC LICENSE Version 3. See `LICENSE.txt` fo
 
 MrSnakeDoc - mrsnakedoc@gmail.com
 
-Project Link: [https://github.com/MrSnakeDoc/weather-app](https://github.com/MrSnakeDoc/weather-app)
+Project Link: [https://github.com/MrSnakeDoc/Tinierurl](https://github.com/MrSnakeDoc/Tinierurl)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
