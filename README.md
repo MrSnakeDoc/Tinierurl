@@ -148,7 +148,7 @@ Distributed under the GNU GENERAL PUBLIC LICENSE Version 3. See `LICENSE.txt` fo
 
 ## Contact
 
-MrSnakeDoc - mrsnakedoc@gmail.com
+MrSnakeDoc - mrsnakedoc@backenddev.mozmail.com
 
 Project Link: [https://github.com/MrSnakeDoc/Tinierurl](https://github.com/MrSnakeDoc/Tinierurl)
 
